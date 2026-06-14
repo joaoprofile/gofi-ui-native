@@ -1,5 +1,6 @@
-import { type ReactNode } from 'react';
-import { View } from 'react-native';
+import { useState, type ReactNode } from 'react';
+import { View, Pressable } from 'react-native';
+import { ChevronDown, ChevronRight } from 'lucide-react-native';
 import { useTheme } from 'gofi-ui-native';
 import { Text } from 'gofi-ui-native';
 import { Row, Divider } from 'gofi-ui-native';
@@ -32,12 +33,34 @@ export function DocSection({ title, description, children }: { title: string; de
   );
 }
 
-/** Live preview frame for an example. */
-export function Example({ children, padded = true }: { children: ReactNode; padded?: boolean }) {
+/** Live preview frame for an example, with an optional collapsible "Show code" panel. */
+export function Example({ children, code, padded = true }: { children: ReactNode; code?: string; padded?: boolean }) {
   const t = useTheme();
+  const [open, setOpen] = useState(false);
   return (
-    <View style={{ borderWidth: 1, borderColor: t.surfaceBorder, borderRadius: t.radius.lg, backgroundColor: t.surfacePage, padding: padded ? t.space[5] : 0, gap: t.space[3], overflow: 'hidden' }}>
-      {children}
+    <View style={{ borderWidth: 1, borderColor: t.surfaceBorder, borderRadius: t.radius.lg, overflow: 'hidden' }}>
+      <View style={{ backgroundColor: t.surfacePage, padding: padded ? t.space[5] : 0, gap: t.space[3] }}>
+        {children}
+      </View>
+      {code ? (
+        <>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityState={{ expanded: open }}
+            accessibilityLabel={open ? 'Hide code' : 'Show code'}
+            onPress={() => setOpen((v) => !v)}
+            style={{ flexDirection: 'row', alignItems: 'center', gap: t.space[2], paddingHorizontal: t.space[4], paddingVertical: t.space[3], borderTopWidth: 1, borderTopColor: t.surfaceBorder, backgroundColor: t.surfaceCard }}
+          >
+            {open ? <ChevronDown size={16} color={t.textSecondary} /> : <ChevronRight size={16} color={t.textSecondary} />}
+            <Text variant="bodySm" color="secondary" style={{ fontWeight: '600' }}>{open ? 'Hide code' : 'Show code'}</Text>
+          </Pressable>
+          {open ? (
+            <View style={{ backgroundColor: '#0C111D', padding: t.space[4] }}>
+              <Text color="inherit" style={{ color: '#D0D5DD', fontFamily: 'monospace', fontSize: 13, lineHeight: 20 }}>{code}</Text>
+            </View>
+          ) : null}
+        </>
+      ) : null}
     </View>
   );
 }

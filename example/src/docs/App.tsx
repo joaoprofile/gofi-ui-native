@@ -48,7 +48,7 @@ function TopBar({ onMenu, onNavigate, wide }: { onMenu: () => void; onNavigate: 
           <View style={{ width: 32, height: 32, borderRadius: t.radius.md, backgroundColor: t.colorBrand, alignItems: 'center', justifyContent: 'center' }}>
             <Text color="onBrand" style={{ fontWeight: '800' }}>G</Text>
           </View>
-          <Text variant="h3" numberOfLines={1}>gofi UI Native</Text>
+          <Text variant="h3" numberOfLines={1}>Gofi UI Native</Text>
         </Pressable>
         <Pressable accessibilityRole="button" accessibilityLabel="Showcase" onPress={() => onNavigate('showcase')} hitSlop={6} style={{ flexDirection: 'row', alignItems: 'center', gap: 4, paddingHorizontal: t.space[2] }}>
           <LayoutGrid size={16} color={t.textSecondary} />

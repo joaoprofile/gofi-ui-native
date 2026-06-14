@@ -17,9 +17,20 @@ export function IntroductionPage() {
   return (
     <DocPage
       group="Get started"
-      title="gofi UI Native"
-      lead="A React Native design system — the mobile counterpart of gofi-ui. Brand-color-dominant, accessible. Default brand #AAD7FF."
+      title="Gofi UI Native"
+      lead="A React Native + TypeScript design system — the mobile counterpart of Gofi UI for web. Accessible by default and themeable end-to-end, from a single set of design tokens."
     >
+      <DocSection title="Overview" description="What Gofi UI Native is and who it's for.">
+        <Card variant="outlined">
+          <Text variant="bodySm" color="secondary">
+            Gofi UI Native is a component library for Expo / React Native that runs on web and native from
+            one codebase. It was built first for our own products and opened up to the community — free to use,
+            offered as-is, with no guarantees. Components are driven by tokens, ship with accessibility baked in,
+            and react live to dark mode and the brand switch.
+          </Text>
+        </Card>
+      </DocSection>
+
       <DocSection title="Highlights">
         <View style={{ gap: t.space[3] }}>
           {highlights.map(([h, d]) => (
@@ -54,7 +65,7 @@ export function IntroductionPage() {
 
 export function InstallationPage() {
   return (
-    <DocPage group="Get started" title="Installation" lead="Add gofi-ui-native to your Expo / React Native app.">
+    <DocPage group="Get started" title="Installation" lead="Add Gofi UI Native to your Expo / React Native app.">
       <DocSection title="Install">
         <Code code={`# npm
 npm install gofi-ui-native

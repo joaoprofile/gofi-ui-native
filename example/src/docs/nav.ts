@@ -28,6 +28,16 @@ export const NAV: NavGroup[] = [
     ],
   },
   {
+    group: 'Patterns',
+    items: [
+      { id: 'patterns', label: 'Overview' },
+      { id: 'pattern-splash', label: 'Splash' },
+      { id: 'pattern-login', label: 'Login / Sign in' },
+      { id: 'pattern-register', label: 'Register / Sign up' },
+      { id: 'pattern-crud', label: 'CRUD' },
+    ],
+  },
+  {
     group: 'Showcase',
     items: [
       { id: 'showcase', label: 'Overview' },
@@ -42,4 +52,7 @@ export const NAV: NavGroup[] = [
 ];
 
 /** Routes that render a full-bleed phone app (no docs chrome padding). */
-export const SHOWCASE_ROUTES = new Set(['hero', 'dashboard', 'finance', 'bank', 'crm', 'education']);
+export const SHOWCASE_ROUTES = new Set([
+  'hero', 'dashboard', 'finance', 'bank', 'crm', 'education',
+  'pattern-splash', 'pattern-login', 'pattern-register', 'pattern-crud',
+]);

@@ -24,7 +24,7 @@ export function ShowcaseHomePage() {
   const [, navigate] = useRoute();
 
   return (
-    <DocPage group="Showcase" title="Showcase" lead="Real mobile screens built end-to-end with gofi-ui-native. Each reacts live to dark mode and the brand switch. Open one to see the design system in context.">
+    <DocPage group="Showcase" title="Showcase" lead="Real mobile screens built end-to-end with Gofi UI Native. Each reacts live to dark mode and the brand switch. Open one to see the design system in context.">
       <DocSection title="Example apps">
         <View style={{ gap: t.space[3] }}>
           {EXAMPLES.map(({ id, name, tag, description, Icon }) => (
