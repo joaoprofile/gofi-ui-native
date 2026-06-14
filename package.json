@@ -1,7 +1,7 @@
 {
   "name": "gofi-ui-native",
   "version": "0.1.0",
-  "description": "GOFI Design System for React Native — accessible, token-driven components with a brand-color-dominant surface system. Default brand #AAD7FF.",
+  "description": "GOFI Design System for React Native",
   "license": "MIT",
   "author": "João Carvalho <joaocarvalhoprofile@gmail.com>",
   "homepage": "https://joaoprofile.github.io/gofi-ui-native",
