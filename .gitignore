@@ -2,7 +2,7 @@
 node_modules/
 
 # build output (npm)
-lib/
+/lib/
 
 # expo / metro / web export (docs)
 .expo/

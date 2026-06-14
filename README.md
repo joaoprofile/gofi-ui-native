@@ -1,8 +1,16 @@
 # gofi-ui-native
 
-A **React Native + TypeScript design system**: accessibility-first, with a **dominant
-brand color on large surfaces** (`bg-brand` = `#AAD7FF`, navy on-brand text) and
-tokens/modes as the theming engine. The mobile counterpart of **gofi-ui** (web).
+**gofi-ui-native** is a **React Native + TypeScript design system**: accessibility-first.
+The mobile counterpart of **gofi-ui** (web).
+
+It was built first and foremost for our own projects, and we decided to open it up to the
+community in case it's useful to you too. **It's free to use — but offered as-is, with no
+guarantees:** no promise of fitness for your particular purpose, no committed roadmap, and
+no guaranteed support. If it fits your needs, great; if not, feel free to fork it and adapt
+it. See the [License](#license) for the full disclaimer.
+
+Want to send improvements? Contributions are welcome as a **feature branch + Pull
+Request** — see [Contributing](#contributing).
 
 📖 **Docs & live showcase:** https://joaoprofile.github.io/gofi-ui-native
 
@@ -91,6 +99,22 @@ npm run ios            # / npm run android — on device / simulator
 
 The docs app imports the library by its published name (`gofi-ui-native`), aliased to
 `../src` so edits hot-reload while you work.
+
+## Contributing
+
+This library is maintained on a best-effort basis, but improvements from the community are
+welcome. If you'd like to contribute:
+
+1. **Open an issue** first to report a bug or propose a change — it's the best place to
+   discuss the idea before you write code (and avoids duplicate work).
+2. **Fork** the repo and create a branch off `main` (e.g. `feature/my-improvement` or
+   `fix/some-bug`).
+3. Keep changes focused; run `npm run typecheck` and `npm run build` before opening the PR.
+4. Open a **Pull Request** describing what changed and why (link the related issue).
+
+PRs are reviewed when time allows — there's no guaranteed turnaround. Please don't be
+discouraged if a change takes a while or doesn't get merged; you're always free to fork
+and maintain your own variant.
 
 ## License
 
