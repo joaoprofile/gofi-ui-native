@@ -1,0 +1,20 @@
+# deps
+node_modules/
+
+# build output (npm)
+lib/
+
+# expo / metro / web export (docs)
+.expo/
+dist/
+web-build/
+*.tsbuildinfo
+
+# logs & os
+npm-debug.*
+yarn-error.*
+.DS_Store
+*.log
+
+# env
+.env*.local

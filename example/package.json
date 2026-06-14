@@ -1,0 +1,33 @@
+{
+  "name": "gofi-ui-native-docs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Documentation & showcase app for gofi-ui-native (Expo, web + native).",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "web": "expo start --web",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "export:web": "expo export --platform web",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@expo/ngrok": "^4.1.3",
+    "expo": "~54.0.35",
+    "expo-status-bar": "~3.0.9",
+    "lucide-react-native": "^0.456.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-safe-area-context": "~5.6.2",
+    "react-native-svg": "15.12.1",
+    "react-native-web": "^0.21.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@types/react": "~19.1.10",
+    "babel-plugin-module-resolver": "^5.0.2",
+    "typescript": "^5.9.0"
+  }
+}

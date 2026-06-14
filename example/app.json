@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "gofi UI Native",
+    "slug": "gofi-ui-native",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "platforms": ["ios", "android", "web"],
+    "splash": {
+      "backgroundColor": "#AAD7FF"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "experiments": {
+      "baseUrl": "/gofi-ui-native"
+    }
+  }
+}
